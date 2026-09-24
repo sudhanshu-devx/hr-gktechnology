@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🔥 Button */
+.fi-btn-primary {
+    background: linear-gradient(135deg, #6366f1, #22c55e) !important;
+    border-radius: 12px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.fi-btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* ✨ Card */
+.fi-simple-main {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+}
+
+/* 🧊 Inputs */
+.fi-input {
+    border-radius: 10px !important;
+    background: rgba(255,255,255,0.05);
+}
