@@ -116,25 +116,41 @@ class UserForm
                             ->preload()
                             ->disabled($readOnly),
 
-                        DatePicker::make('hire_date')
-                            ->required()
-                            ->disabled($readOnly),
+                    //     DatePicker::make('hire_date')
+                    //         ->required()
+                    //         ->disabled($readOnly),
                             
-                            Select::make('location')
-                                ->options([
-                                    'Prayagraj' => 'Prayagraj',
-                                      'Lucknow'   => 'Lucknow',
-                                 ])
-                     ->required()
-                             ->native(false),
+                    //         Select::make('location')
+                    //             ->options([
+                    //                 'Prayagraj' => 'Prayagraj',
+                    //                   'Lucknow'   => 'Lucknow',
+                    //              ])
+                    //  ->required()
+                    //          ->native(false),
 
-                        ToggleButtons::make('employment_type')
-                            ->options([
-                                'full-time' => 'Full time',
-                                'part-time' => 'Part time',
-                                'contract' => 'Contract',
-                                'intern' => 'Intern',
-                            ])
+                    //     ToggleButtons::make('employment_type')
+                    //         ->options([
+                    //             'full-time' => 'Full time',
+                    //             'part-time' => 'Part time',
+                    //             'contract' => 'Contract',
+                    //             'intern' => 'Intern',
+                    //         ])
+                    DatePicker::make('hire_date')
+    ->required()
+    ->disabled($readOnly),
+
+TextInput::make('location')
+    ->default('Prayagraj')
+    ->readOnly()
+    ->required(),
+
+ToggleButtons::make('employment_type')
+    ->options([
+        'full-time' => 'Full time',
+        'part-time' => 'Part time',
+        'contract' => 'Contract',
+        'intern' => 'Intern',
+    ])
                             ->colors([
                                 'full-time' => 'success',
                                 'part-time' => 'warning',
