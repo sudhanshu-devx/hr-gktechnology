@@ -119,12 +119,17 @@ class OfferLetterForm
                     ->required(),
 
                 // 📍 Location
-                Select::make('location')
-                    ->options([
-                        'Prayagraj' => 'Prayagraj',
+                // Select::make('location')
+                //     ->options([
+                //         'Prayagraj' => 'Prayagraj',
                         // 'Lucknow' => 'Lucknow',
-                    ])
-                    ->required(),
+                    // ])
+                    // ->required(),
+                    // 📍 Location
+TextInput::make('location')
+    ->default('Prayagraj')
+    ->readOnly()
+    ->required(),
             ]);
     }
 
